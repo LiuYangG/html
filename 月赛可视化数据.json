@@ -1,0 +1,1751 @@
+{
+  "campuses": 19,
+  "months": [
+    {
+      "key": "2026-07",
+      "label": "7月",
+      "all": {
+        "苗圃": 87,
+        "望道": 79,
+        "total": 166,
+        "unique": 141,
+        "both": 25
+      },
+      "target": {
+        "苗圃": 59,
+        "望道": 56,
+        "total": 115
+      },
+      "coverage": 15,
+      "counts": [
+        {
+          "campus": "济南高新校区",
+          "苗圃": 3,
+          "望道": 0,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        },
+        {
+          "campus": "济南文东校区",
+          "苗圃": 19,
+          "望道": 19,
+          "total": 38,
+          "unique": 35,
+          "both": 3
+        },
+        {
+          "campus": "济南阳光100校区",
+          "苗圃": 1,
+          "望道": 2,
+          "total": 3,
+          "unique": 2,
+          "both": 1
+        },
+        {
+          "campus": "济南龙湖北宸天街校区",
+          "苗圃": 3,
+          "望道": 0,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        },
+        {
+          "campus": "济南印象城校区",
+          "苗圃": 2,
+          "望道": 2,
+          "total": 4,
+          "unique": 4,
+          "both": 0
+        },
+        {
+          "campus": "济南经四路万达校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "济南翡翠郡校区",
+          "苗圃": 3,
+          "望道": 0,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        },
+        {
+          "campus": "济南领秀城校区",
+          "苗圃": 2,
+          "望道": 1,
+          "total": 3,
+          "unique": 2,
+          "both": 1
+        },
+        {
+          "campus": "济南东城逸家校区",
+          "苗圃": 1,
+          "望道": 1,
+          "total": 2,
+          "unique": 1,
+          "both": 1
+        },
+        {
+          "campus": "青岛黄岛校区",
+          "苗圃": 3,
+          "望道": 1,
+          "total": 4,
+          "unique": 4,
+          "both": 0
+        },
+        {
+          "campus": "青岛市北校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "青岛崂山校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "青岛市南校区",
+          "苗圃": 4,
+          "望道": 2,
+          "total": 6,
+          "unique": 4,
+          "both": 2
+        },
+        {
+          "campus": "淄博彩世界校区",
+          "苗圃": 4,
+          "望道": 3,
+          "total": 7,
+          "unique": 5,
+          "both": 2
+        },
+        {
+          "campus": "潍坊阳光100校区",
+          "苗圃": 11,
+          "望道": 15,
+          "total": 26,
+          "unique": 17,
+          "both": 9
+        },
+        {
+          "campus": "潍坊高新校区",
+          "苗圃": 1,
+          "望道": 7,
+          "total": 8,
+          "unique": 8,
+          "both": 0
+        },
+        {
+          "campus": "潍坊智谷校区",
+          "苗圃": 1,
+          "望道": 0,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        },
+        {
+          "campus": "泰安奥莱校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "临沂金玉祥和校区",
+          "苗圃": 1,
+          "望道": 3,
+          "total": 4,
+          "unique": 3,
+          "both": 1
+        }
+      ],
+      "awards": [
+        {
+          "plan": "望道",
+          "task": "T1",
+          "campus": "济南文东校区"
+        }
+      ],
+      "outside": {
+        "苗圃": 28,
+        "望道": 23
+      }
+    },
+    {
+      "key": "2026-08",
+      "label": "8月",
+      "all": {
+        "苗圃": 147,
+        "望道": 112,
+        "total": 259,
+        "unique": 208,
+        "both": 51
+      },
+      "target": {
+        "苗圃": 132,
+        "望道": 93,
+        "total": 225
+      },
+      "coverage": 18,
+      "counts": [
+        {
+          "campus": "济南高新校区",
+          "苗圃": 13,
+          "望道": 2,
+          "total": 15,
+          "unique": 14,
+          "both": 1
+        },
+        {
+          "campus": "济南文东校区",
+          "苗圃": 21,
+          "望道": 12,
+          "total": 33,
+          "unique": 27,
+          "both": 6
+        },
+        {
+          "campus": "济南阳光100校区",
+          "苗圃": 10,
+          "望道": 7,
+          "total": 17,
+          "unique": 12,
+          "both": 5
+        },
+        {
+          "campus": "济南龙湖北宸天街校区",
+          "苗圃": 4,
+          "望道": 2,
+          "total": 6,
+          "unique": 5,
+          "both": 1
+        },
+        {
+          "campus": "济南印象城校区",
+          "苗圃": 3,
+          "望道": 2,
+          "total": 5,
+          "unique": 3,
+          "both": 2
+        },
+        {
+          "campus": "济南经四路万达校区",
+          "苗圃": 5,
+          "望道": 2,
+          "total": 7,
+          "unique": 6,
+          "both": 1
+        },
+        {
+          "campus": "济南翡翠郡校区",
+          "苗圃": 3,
+          "望道": 3,
+          "total": 6,
+          "unique": 5,
+          "both": 1
+        },
+        {
+          "campus": "济南领秀城校区",
+          "苗圃": 7,
+          "望道": 4,
+          "total": 11,
+          "unique": 8,
+          "both": 3
+        },
+        {
+          "campus": "济南东城逸家校区",
+          "苗圃": 2,
+          "望道": 2,
+          "total": 4,
+          "unique": 3,
+          "both": 1
+        },
+        {
+          "campus": "青岛黄岛校区",
+          "苗圃": 7,
+          "望道": 4,
+          "total": 11,
+          "unique": 7,
+          "both": 4
+        },
+        {
+          "campus": "青岛市北校区",
+          "苗圃": 0,
+          "望道": 2,
+          "total": 2,
+          "unique": 2,
+          "both": 0
+        },
+        {
+          "campus": "青岛崂山校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "青岛市南校区",
+          "苗圃": 9,
+          "望道": 3,
+          "total": 12,
+          "unique": 10,
+          "both": 2
+        },
+        {
+          "campus": "淄博彩世界校区",
+          "苗圃": 1,
+          "望道": 0,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        },
+        {
+          "campus": "潍坊阳光100校区",
+          "苗圃": 10,
+          "望道": 16,
+          "total": 26,
+          "unique": 22,
+          "both": 4
+        },
+        {
+          "campus": "潍坊高新校区",
+          "苗圃": 23,
+          "望道": 24,
+          "total": 47,
+          "unique": 34,
+          "both": 13
+        },
+        {
+          "campus": "潍坊智谷校区",
+          "苗圃": 4,
+          "望道": 0,
+          "total": 4,
+          "unique": 4,
+          "both": 0
+        },
+        {
+          "campus": "泰安奥莱校区",
+          "苗圃": 3,
+          "望道": 2,
+          "total": 5,
+          "unique": 5,
+          "both": 0
+        },
+        {
+          "campus": "临沂金玉祥和校区",
+          "苗圃": 7,
+          "望道": 6,
+          "total": 13,
+          "unique": 11,
+          "both": 2
+        }
+      ],
+      "awards": [
+        {
+          "plan": "苗圃",
+          "task": "T1",
+          "campus": "济南龙湖北宸天街校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T2",
+          "campus": "济南龙湖北宸天街校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T3",
+          "campus": "青岛市南校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T4",
+          "campus": "济南龙湖北宸天街校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T5",
+          "campus": "青岛市南校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T6",
+          "campus": "青岛市南校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T1",
+          "campus": "青岛市南校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T2",
+          "campus": "青岛市南校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T3",
+          "campus": "青岛市南校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T4",
+          "campus": "济南阳光100校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T5",
+          "campus": "济南阳光100校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T6",
+          "campus": "济南龙湖北宸天街校区"
+        }
+      ],
+      "outside": {
+        "苗圃": 15,
+        "望道": 19
+      }
+    },
+    {
+      "key": "2026-09",
+      "label": "9月",
+      "all": {
+        "苗圃": 38,
+        "望道": 31,
+        "total": 69,
+        "unique": 60,
+        "both": 9
+      },
+      "target": {
+        "苗圃": 22,
+        "望道": 20,
+        "total": 42
+      },
+      "coverage": 14,
+      "counts": [
+        {
+          "campus": "济南高新校区",
+          "苗圃": 3,
+          "望道": 2,
+          "total": 5,
+          "unique": 4,
+          "both": 1
+        },
+        {
+          "campus": "济南文东校区",
+          "苗圃": 2,
+          "望道": 1,
+          "total": 3,
+          "unique": 2,
+          "both": 1
+        },
+        {
+          "campus": "济南阳光100校区",
+          "苗圃": 3,
+          "望道": 2,
+          "total": 5,
+          "unique": 4,
+          "both": 1
+        },
+        {
+          "campus": "济南龙湖北宸天街校区",
+          "苗圃": 2,
+          "望道": 2,
+          "total": 4,
+          "unique": 4,
+          "both": 0
+        },
+        {
+          "campus": "济南印象城校区",
+          "苗圃": 2,
+          "望道": 1,
+          "total": 3,
+          "unique": 2,
+          "both": 1
+        },
+        {
+          "campus": "济南经四路万达校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "济南翡翠郡校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "济南领秀城校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "济南东城逸家校区",
+          "苗圃": 0,
+          "望道": 1,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        },
+        {
+          "campus": "青岛黄岛校区",
+          "苗圃": 1,
+          "望道": 0,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        },
+        {
+          "campus": "青岛市北校区",
+          "苗圃": 1,
+          "望道": 1,
+          "total": 2,
+          "unique": 2,
+          "both": 0
+        },
+        {
+          "campus": "青岛崂山校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "青岛市南校区",
+          "苗圃": 2,
+          "望道": 2,
+          "total": 4,
+          "unique": 2,
+          "both": 2
+        },
+        {
+          "campus": "淄博彩世界校区",
+          "苗圃": 2,
+          "望道": 0,
+          "total": 2,
+          "unique": 2,
+          "both": 0
+        },
+        {
+          "campus": "潍坊阳光100校区",
+          "苗圃": 1,
+          "望道": 0,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        },
+        {
+          "campus": "潍坊高新校区",
+          "苗圃": 2,
+          "望道": 1,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        },
+        {
+          "campus": "潍坊智谷校区",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "campus": "泰安奥莱校区",
+          "苗圃": 0,
+          "望道": 3,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        },
+        {
+          "campus": "临沂金玉祥和校区",
+          "苗圃": 1,
+          "望道": 4,
+          "total": 5,
+          "unique": 5,
+          "both": 0
+        }
+      ],
+      "awards": [
+        {
+          "plan": "苗圃",
+          "task": "T1",
+          "campus": "潍坊高新校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T2",
+          "campus": "潍坊高新校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T3",
+          "campus": "潍坊高新校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T4",
+          "campus": "潍坊高新校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T5",
+          "campus": "潍坊高新校区"
+        },
+        {
+          "plan": "苗圃",
+          "task": "T6",
+          "campus": "济南印象城校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T1",
+          "campus": "济南印象城校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T2",
+          "campus": "济南印象城校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T3",
+          "campus": "济南印象城校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T4",
+          "campus": "济南印象城校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T5",
+          "campus": "济南印象城校区"
+        },
+        {
+          "plan": "望道",
+          "task": "T6",
+          "campus": "济南印象城校区"
+        }
+      ],
+      "outside": {
+        "苗圃": 16,
+        "望道": 11
+      }
+    }
+  ],
+  "campusSummary": [
+    {
+      "campus": "济南高新校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 3,
+          "望道": 0,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 13,
+          "望道": 2,
+          "total": 15,
+          "unique": 14,
+          "both": 1
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 3,
+          "望道": 2,
+          "total": 5,
+          "unique": 4,
+          "both": 1
+        }
+      ],
+      "total": 23,
+      "unique3": 18,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "济南文东校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 19,
+          "望道": 19,
+          "total": 38,
+          "unique": 35,
+          "both": 3
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 21,
+          "望道": 12,
+          "total": 33,
+          "unique": 27,
+          "both": 6
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 2,
+          "望道": 1,
+          "total": 3,
+          "unique": 2,
+          "both": 1
+        }
+      ],
+      "total": 74,
+      "unique3": 57,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 1,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 1,
+          "苗圃": 0,
+          "望道": 1
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "济南阳光100校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 1,
+          "望道": 2,
+          "total": 3,
+          "unique": 2,
+          "both": 1
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 10,
+          "望道": 7,
+          "total": 17,
+          "unique": 12,
+          "both": 5
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 3,
+          "望道": 2,
+          "total": 5,
+          "unique": 4,
+          "both": 1
+        }
+      ],
+      "total": 25,
+      "unique3": 14,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 2,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 2,
+          "苗圃": 0,
+          "望道": 2
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "济南龙湖北宸天街校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 3,
+          "望道": 0,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 4,
+          "望道": 2,
+          "total": 6,
+          "unique": 5,
+          "both": 1
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 2,
+          "望道": 2,
+          "total": 4,
+          "unique": 4,
+          "both": 0
+        }
+      ],
+      "total": 13,
+      "unique3": 5,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 4,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 4,
+          "苗圃": 3,
+          "望道": 1
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "济南印象城校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 2,
+          "望道": 2,
+          "total": 4,
+          "unique": 4,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 3,
+          "望道": 2,
+          "total": 5,
+          "unique": 3,
+          "both": 2
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 2,
+          "望道": 1,
+          "total": 3,
+          "unique": 2,
+          "both": 1
+        }
+      ],
+      "total": 12,
+      "unique3": 7,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 7,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 7,
+          "苗圃": 1,
+          "望道": 6
+        }
+      ]
+    },
+    {
+      "campus": "济南经四路万达校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 5,
+          "望道": 2,
+          "total": 7,
+          "unique": 6,
+          "both": 1
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        }
+      ],
+      "total": 7,
+      "unique3": 6,
+      "activeMonths": 1,
+      "zeroMonths": 2,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "济南翡翠郡校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 3,
+          "望道": 0,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 3,
+          "望道": 3,
+          "total": 6,
+          "unique": 5,
+          "both": 1
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        }
+      ],
+      "total": 9,
+      "unique3": 7,
+      "activeMonths": 2,
+      "zeroMonths": 1,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "济南领秀城校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 2,
+          "望道": 1,
+          "total": 3,
+          "unique": 2,
+          "both": 1
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 7,
+          "望道": 4,
+          "total": 11,
+          "unique": 8,
+          "both": 3
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        }
+      ],
+      "total": 14,
+      "unique3": 9,
+      "activeMonths": 2,
+      "zeroMonths": 1,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "济南东城逸家校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 1,
+          "望道": 1,
+          "total": 2,
+          "unique": 1,
+          "both": 1
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 2,
+          "望道": 2,
+          "total": 4,
+          "unique": 3,
+          "both": 1
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 0,
+          "望道": 1,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        }
+      ],
+      "total": 7,
+      "unique3": 3,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "青岛黄岛校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 3,
+          "望道": 1,
+          "total": 4,
+          "unique": 4,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 7,
+          "望道": 4,
+          "total": 11,
+          "unique": 7,
+          "both": 4
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 1,
+          "望道": 0,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        }
+      ],
+      "total": 16,
+      "unique3": 11,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "青岛市北校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 0,
+          "望道": 2,
+          "total": 2,
+          "unique": 2,
+          "both": 0
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 1,
+          "望道": 1,
+          "total": 2,
+          "unique": 2,
+          "both": 0
+        }
+      ],
+      "total": 4,
+      "unique3": 3,
+      "activeMonths": 2,
+      "zeroMonths": 1,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "青岛崂山校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        }
+      ],
+      "total": 0,
+      "unique3": 0,
+      "activeMonths": 0,
+      "zeroMonths": 3,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "青岛市南校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 4,
+          "望道": 2,
+          "total": 6,
+          "unique": 4,
+          "both": 2
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 9,
+          "望道": 3,
+          "total": 12,
+          "unique": 10,
+          "both": 2
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 2,
+          "望道": 2,
+          "total": 4,
+          "unique": 2,
+          "both": 2
+        }
+      ],
+      "total": 22,
+      "unique3": 11,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 6,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 6,
+          "苗圃": 3,
+          "望道": 3
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "淄博彩世界校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 4,
+          "望道": 3,
+          "total": 7,
+          "unique": 5,
+          "both": 2
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 1,
+          "望道": 0,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 2,
+          "望道": 0,
+          "total": 2,
+          "unique": 2,
+          "both": 0
+        }
+      ],
+      "total": 10,
+      "unique3": 8,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "潍坊阳光100校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 11,
+          "望道": 15,
+          "total": 26,
+          "unique": 17,
+          "both": 9
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 10,
+          "望道": 16,
+          "total": 26,
+          "unique": 22,
+          "both": 4
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 1,
+          "望道": 0,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        }
+      ],
+      "total": 53,
+      "unique3": 33,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "潍坊高新校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 1,
+          "望道": 7,
+          "total": 8,
+          "unique": 8,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 23,
+          "望道": 24,
+          "total": 47,
+          "unique": 34,
+          "both": 13
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 2,
+          "望道": 1,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        }
+      ],
+      "total": 58,
+      "unique3": 37,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 5,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 5,
+          "苗圃": 5,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "潍坊智谷校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 1,
+          "望道": 0,
+          "total": 1,
+          "unique": 1,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 4,
+          "望道": 0,
+          "total": 4,
+          "unique": 4,
+          "both": 0
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        }
+      ],
+      "total": 5,
+      "unique3": 4,
+      "activeMonths": 2,
+      "zeroMonths": 1,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "泰安奥莱校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 0,
+          "望道": 0,
+          "total": 0,
+          "unique": 0,
+          "both": 0
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 3,
+          "望道": 2,
+          "total": 5,
+          "unique": 5,
+          "both": 0
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 0,
+          "望道": 3,
+          "total": 3,
+          "unique": 3,
+          "both": 0
+        }
+      ],
+      "total": 8,
+      "unique3": 7,
+      "activeMonths": 2,
+      "zeroMonths": 1,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    },
+    {
+      "campus": "临沂金玉祥和校区",
+      "months": [
+        {
+          "month": "7月",
+          "key": "2026-07",
+          "苗圃": 1,
+          "望道": 3,
+          "total": 4,
+          "unique": 3,
+          "both": 1
+        },
+        {
+          "month": "8月",
+          "key": "2026-08",
+          "苗圃": 7,
+          "望道": 6,
+          "total": 13,
+          "unique": 11,
+          "both": 2
+        },
+        {
+          "month": "9月",
+          "key": "2026-09",
+          "苗圃": 1,
+          "望道": 4,
+          "total": 5,
+          "unique": 5,
+          "both": 0
+        }
+      ],
+      "total": 22,
+      "unique3": 15,
+      "activeMonths": 3,
+      "zeroMonths": 0,
+      "awardsTotal": 0,
+      "awardByMonth": [
+        {
+          "month": "7月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "8月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        },
+        {
+          "month": "9月",
+          "count": 0,
+          "苗圃": 0,
+          "望道": 0
+        }
+      ]
+    }
+  ],
+  "threeMonthTargetUnique": 255,
+  "targetEntries": 382,
+  "allEntries": 494,
+  "outsideEntries": 112,
+  "generatedAt": "2026-10-10"
+}
