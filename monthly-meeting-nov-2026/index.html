@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#edf4f8">
+<title>月度教学同步会 · 2026.11</title>
+<style>
+  :root{--ink:#172b3a;--muted:#607584;--blue:#dcecf4;--blue2:#a9cfdf;--orange:#ef7b42;--orange-light:#fff0e7;--teal:#197f83;--paper:#fbfcfc;--line:#d6e0e5;--navy:#24465a}
+  *{box-sizing:border-box}
+  html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#e6edf1;color:var(--ink);font-family:"Aptos","Microsoft YaHei UI","Noto Sans CJK SC",sans-serif}
+  button{font:inherit}
+  #viewport{position:absolute;inset:0;display:grid;place-items:center}
+  #deck{position:relative;width:1600px;height:900px;transform-origin:center center;background:var(--paper);overflow:hidden;box-shadow:0 24px 80px #18354724}
+  .slide{position:absolute;inset:0;padding:72px 94px 92px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transform:translateX(22px);transition:opacity .32s ease,transform .32s ease,visibility .32s;overflow:hidden;background:var(--paper)}
+  .slide.active{opacity:1;visibility:visible;transform:translateX(0)}
+  .slide:before{content:"";position:absolute;inset:0 auto 0 0;width:12px;background:var(--blue2)}
+  .slide:nth-child(4n+1):before,.slide:nth-child(4n+2):before{background:var(--orange)}
+  .slide:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #dbe7eb;border-radius:50%;right:-250px;top:-255px;pointer-events:none}
+  .kicker{display:flex;align-items:center;gap:12px;color:var(--teal);font-size:18px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
+  .kicker:before{content:"";width:30px;height:3px;background:var(--orange)}
+  h1,h2,h3,p{margin:0}
+  h1{font-size:70px;line-height:1.12;letter-spacing:0;font-weight:760}
+  h2{font-size:48px;line-height:1.18;letter-spacing:0;font-weight:740;margin-top:18px}
+  h3{font-size:25px;line-height:1.25;font-weight:720}
+  .subtitle{font-size:25px;color:var(--muted);line-height:1.55}
+  .slide-head{position:relative;z-index:1;margin-bottom:34px}
+  .slide-head .subline{font-size:20px;color:var(--muted);margin-top:12px}
+  .body{position:relative;z-index:1;flex:1;min-height:0}
+  .foot{position:absolute;left:94px;right:94px;bottom:38px;display:flex;justify-content:space-between;align-items:center;color:#81929b;font-size:15px}
+  .foot .brand{font-weight:700;letter-spacing:.6px;color:#527080}
+  .cover{padding:0;background:#eaf3f7}
+  .cover:before{width:0}
+  .cover:after{width:850px;height:850px;right:-280px;top:130px;border:1px solid #c8dfe8}
+  .cover-art{position:absolute;right:85px;top:115px;width:640px;height:640px}
+  .cover-art .ring{position:absolute;inset:25px;border:1px solid #9fc7d6;border-radius:50%}
+  .cover-art .ring.r2{inset:110px;border-color:#c2dce5}
+  .cover-art .block{position:absolute;background:var(--orange);width:170px;height:170px;right:80px;top:90px;border-radius:4px;transform:rotate(10deg)}
+  .cover-art .block.b2{width:116px;height:116px;background:#197f83;right:350px;top:320px;transform:rotate(-12deg)}
+  .cover-art .block.b3{width:68px;height:68px;background:#f2bd6b;right:157px;top:410px;transform:rotate(22deg)}
+  .cover-art .orbit{position:absolute;left:260px;top:105px;width:210px;height:425px;border:2px solid #fff;border-radius:50%;transform:rotate(55deg)}
+  .cover-copy{position:absolute;left:120px;top:164px;width:760px;z-index:2}
+  .cover-copy .kicker{color:#315a70;font-size:20px}
+  .cover h1{margin-top:44px;max-width:760px;font-size:82px}
+  .cover .subtitle{margin-top:26px;max-width:690px;font-size:26px}
+  .cover-meta{display:flex;align-items:center;gap:18px;margin-top:54px;font-size:18px;color:#526d7c}
+  .cover-meta .pill{padding:10px 16px;border:1px solid #a9c8d4;border-radius:3px;background:#ffffff90;color:#31576c;font-weight:700}
+  .agenda{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;max-width:1160px}
+  .agenda-item{display:flex;align-items:center;gap:22px;padding:20px 0;border-bottom:1px solid var(--line);font-size:26px;font-weight:650}
+  .agenda-item b{font-size:17px;color:var(--orange);letter-spacing:1px;width:36px}
+  .thesis{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;height:100%;align-items:center}
+  .thesis blockquote{margin:0;font-size:42px;line-height:1.35;font-weight:730;border-left:7px solid var(--orange);padding:12px 0 12px 32px;max-width:790px}
+  .thesis blockquote em{color:var(--teal);font-style:normal}
+  .thesis-list{display:grid;gap:14px}
+  .thesis-row{background:#eef5f7;padding:21px 24px;border-left:3px solid var(--blue2);font-size:21px;line-height:1.45}
+  .thesis-row strong{display:block;font-size:16px;color:var(--teal);margin-bottom:7px;letter-spacing:.6px}
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:26px;height:100%}
+  .compare-panel{padding:26px 30px 20px;background:#f0f6f8;border-top:5px solid var(--blue2);display:flex;flex-direction:column}
+  .compare-panel.s{background:#f7f7f3;border-top-color:var(--orange)}
+  .compare-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}
+  .compare-title h3{font-size:31px}
+  .compare-title span{color:var(--muted);font-size:16px}
+  .qrow{display:grid;grid-template-columns:62px 1fr auto;gap:15px;align-items:center;padding:13px 0;border-bottom:1px solid #d7e2e6}
+  .qrow b{font-size:18px;color:var(--teal)}
+  .compare-panel.s .qrow b{color:#c56432}
+  .qrow strong{font-size:20px}
+  .qrow small{display:block;font-size:15px;color:var(--muted);margin-top:4px}
+  .tag{font-size:14px;color:#4e6b77;background:#deebef;padding:7px 9px;white-space:nowrap}
+  .compare-panel.s .tag{background:#f9e6d9;color:#a7522a}
+  .bottom-callout{margin-top:auto;padding:17px 19px;background:#fff;border-left:4px solid var(--orange);font-size:19px;line-height:1.4}
+  .insight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .insight{padding:21px 20px 18px;background:#f2f7f9;border-top:4px solid #8ebdd0;min-height:176px}
+  .insight:nth-child(2){border-color:var(--orange)}
+  .insight:nth-child(3){border-color:#78ada2}
+  .insight:nth-child(4){border-color:#d6b45d}
+  .insight .num{font-size:16px;color:var(--muted);font-weight:700}
+  .insight h3{margin:13px 0 9px}
+  .insight p{font-size:17px;color:#526979;line-height:1.5}
+  .summary-band{display:flex;gap:25px;align-items:center;margin-top:22px;padding:18px 24px;background:#e7f0f4;font-size:20px;line-height:1.4}
+  .summary-band b{color:var(--teal);white-space:nowrap}
+  .pathway{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-top:14px}
+  .pathway:before{content:"";position:absolute;left:14%;right:14%;top:42px;height:2px;background:#b9d3dc}
+  .stage{position:relative;padding:0 22px}
+  .stage-mark{width:84px;height:84px;display:grid;place-items:center;border-radius:50%;background:#e4f0f4;border:5px solid white;box-shadow:0 0 0 1px #abcbd6;color:var(--teal);font-size:23px;font-weight:800;position:relative;margin-bottom:24px}
+  .stage:nth-child(2) .stage-mark{background:#fff0e6;box-shadow:0 0 0 1px #e9a780;color:#c75d2b}
+  .stage:nth-child(3) .stage-mark{background:#e8f1e9;box-shadow:0 0 0 1px #a4c3ad;color:#477855}
+  .stage h3{margin-bottom:12px}
+  .stage p{font-size:18px;line-height:1.52;color:#536a78}
+  .stage .goal{margin-top:15px;padding:12px 14px;background:#f3f7f8;font-size:16px;color:#2f5968}
+  .comms{display:grid;grid-template-columns:240px 1fr;gap:45px;align-items:center;height:100%}
+  .comms-label{height:295px;display:flex;flex-direction:column;justify-content:center;padding:26px;background:#183b50;color:#fff}
+  .comms-label span{color:#a8ceda;font-size:16px;font-weight:700;letter-spacing:1px}
+  .comms-label strong{font-size:38px;line-height:1.25;margin-top:17px}
+  .comms-steps{display:grid;gap:0}
+  .comms-step{display:grid;grid-template-columns:68px 1fr;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+  .comms-step:last-child{border:0}
+  .comms-step b{display:grid;place-items:center;width:48px;height:48px;background:#e5f0f3;color:var(--teal);font-size:21px;border-radius:50%}
+  .comms-step:nth-child(3) b{background:var(--orange-light);color:#c75d2b}
+  .comms-step h3{font-size:22px;margin-bottom:5px}
+  .comms-step p{font-size:17px;color:var(--muted);line-height:1.45}
+  .uncertainty{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:stretch;height:100%}
+  .warning{padding:32px;background:#fff1e8;border-left:6px solid var(--orange);display:flex;flex-direction:column;justify-content:center}
+  .warning .eyebrow{color:#b65326;font-size:16px;font-weight:800;letter-spacing:1px}
+  .warning strong{font-size:39px;line-height:1.25;margin-top:17px}
+  .warning p{font-size:19px;line-height:1.55;color:#65534b;margin-top:15px}
+  .method{padding:8px 0;display:flex;flex-direction:column;justify-content:center}
+  .method h3{font-size:26px;margin-bottom:17px}
+  .method ol{list-style:none;margin:0;padding:0;counter-reset:item}
+  .method li{counter-increment:item;display:grid;grid-template-columns:40px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45;color:#425b69}
+  .method li:before{content:counter(item,decimal-leading-zero);font-weight:800;color:var(--teal)}
+  .quote{margin-top:19px;padding:14px 17px;background:#edf4f6;font-size:17px;line-height:1.45;color:#375363}
+  .program{display:grid;grid-template-columns:1fr 150px 1fr;gap:30px;align-items:center;height:100%}
+  .program-box{padding:30px 32px;background:#f1f6f8;border-top:5px solid #96c4d3;min-height:330px}
+  .program-box h3{font-size:27px;margin-bottom:15px}
+  .program-box p{font-size:18px;color:#526a78;line-height:1.6}
+  .program-box ul{padding-left:20px;margin:17px 0 0;font-size:17px;line-height:1.7;color:#354e5c}
+  .program-box.custom{border-top-color:var(--orange);background:#fff5ee}
+  .program-arrow{font-size:52px;text-align:center;color:#7ca9b8}
+  .program-arrow span{display:block;font-size:15px;color:var(--muted);margin-top:9px}
+  .stats{display:grid;grid-template-columns:1fr 1fr .88fr;gap:24px;height:100%;align-items:stretch}
+  .stat-panel{background:#eef5f7;padding:28px 32px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+  .stat-panel:nth-child(2){background:#fff3eb}
+  .stat-panel .label{font-size:19px;color:#56717f;font-weight:700}
+  .stat-panel .value{font-size:116px;line-height:1;font-weight:800;letter-spacing:0;color:#197f83;margin:16px 0 8px}
+  .stat-panel:nth-child(2) .value{color:#df7138}
+  .stat-panel .unit{font-size:25px;color:#627986}
+  .stat-panel .bar{height:10px;width:100%;background:#d2e2e8;margin-top:29px;position:relative}
+  .stat-panel .bar i{display:block;height:100%;background:#197f83;width:100%}
+  .stat-panel:nth-child(2) .bar i{background:#df7138;width:31%}
+  .stat-panel small{font-size:15px;color:#81929b;margin-top:14px}
+  .priority{background:#183b50;color:#fff;padding:29px 27px;display:flex;flex-direction:column;justify-content:center}
+  .priority span{font-size:15px;letter-spacing:1px;color:#a6d0dc;font-weight:700}
+  .priority strong{font-size:30px;line-height:1.35;margin:17px 0}
+  .priority p{font-size:17px;color:#d3e2e7;line-height:1.5}
+  .gesp{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;height:100%;align-items:center}
+  .gesp-call{padding:34px;background:#e9f2f5;border-left:6px solid var(--teal)}
+  .gesp-call strong{font-size:36px;line-height:1.3;display:block}
+  .gesp-call p{font-size:19px;color:#4d6775;line-height:1.55;margin-top:17px}
+  .gesp-points{display:grid;gap:14px}
+  .gesp-point{display:grid;grid-template-columns:52px 1fr;gap:15px;align-items:start;padding:16px 0;border-bottom:1px solid var(--line)}
+  .gesp-point b{font-size:17px;color:var(--orange);padding-top:3px}
+  .gesp-point p{font-size:19px;line-height:1.45;color:#405a68}
+  .actions{display:grid;grid-template-columns:1fr 1fr;gap:17px 30px;max-width:1220px}
+  .action{display:grid;grid-template-columns:55px 1fr;gap:17px;align-items:start;padding:19px 0;border-bottom:1px solid var(--line)}
+  .action .n{font-size:16px;font-weight:800;color:var(--orange);padding-top:3px}
+  .action h3{font-size:21px;margin-bottom:6px}
+  .action p{font-size:17px;color:var(--muted);line-height:1.45}
+  .closing{background:#eaf3f7}
+  .closing:before{background:var(--orange)}
+  .closing-copy{display:flex;flex-direction:column;justify-content:center;height:100%;max-width:1030px}
+  .closing h2{font-size:68px;line-height:1.2;margin:0 0 27px}
+  .closing p{font-size:27px;line-height:1.5;color:#4e6877}
+  .closing .closing-rule{width:104px;height:6px;background:var(--orange);margin:0 0 36px}
+  .closing .closing-date{margin-top:51px;font-size:18px;font-weight:700;color:#58717e}
+  #controls{position:absolute;z-index:100;left:0;right:0;bottom:0;height:70px;display:flex;align-items:center;justify-content:center;gap:12px;background:linear-gradient(0deg,#102e3e24,transparent);pointer-events:none}
+  #controls>*{pointer-events:auto}
+  .control-btn{height:42px;min-width:44px;border:1px solid #cbd8de;background:#ffffffed;color:#234353;border-radius:3px;cursor:pointer;box-shadow:0 2px 8px #173d4d18}
+  .control-btn:hover{background:#eaf3f6}
+  .control-btn:disabled{opacity:.45;cursor:default}
+  #counter{min-width:72px;text-align:center;font-size:15px;font-weight:700;color:#355665}
+  #progress{position:absolute;bottom:0;left:0;height:4px;background:var(--orange);transition:width .25s ease}
+  #hint{position:absolute;left:30px;bottom:22px;color:#58717e;font-size:14px;pointer-events:none}
+  #overview{position:absolute;inset:0;z-index:90;display:none;background:#edf4f7f4;padding:70px;overflow:auto;grid-template-columns:repeat(4,1fr);gap:18px}
+  #overview.open{display:grid}
+  .thumb{border:1px solid #c6d7df;background:#fff;text-align:left;padding:20px;min-height:125px;color:var(--ink);cursor:pointer;box-shadow:0 5px 15px #173d4d10}
+  .thumb:hover{border-color:var(--orange);transform:translateY(-2px)}
+  .thumb b{font-size:14px;color:var(--orange)}
+  .thumb span{display:block;margin-top:13px;font-size:18px;font-weight:700;line-height:1.3}
+  @media (prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+  @media print{
+    @page{size:16in 9in;margin:0}
+    html,body{overflow:visible;background:#fff}
+    #viewport{position:static;display:block}
+    #deck{width:1600px;height:auto;transform:none!important;overflow:visible;box-shadow:none}
+    .slide{position:relative;inset:auto;width:1600px;height:900px;opacity:1;visibility:visible;transform:none;page-break-after:always;break-after:page}
+    #controls,#overview{display:none!important}
+  }
+  /* Refined meeting-room theme: warm ivory, pine, and restrained copper. */
+  :root{--ink:#202d29;--muted:#68766f;--blue:#e5e8df;--blue2:#9eafa1;--orange:#b87350;--orange-light:#f3e7de;--teal:#557c6d;--paper:#f8f6f0;--line:#dfddd4;--navy:#263b34}
+  html,body{background:#e6e7e1;color:var(--ink);font-family:"Aptos","Microsoft YaHei UI","Noto Sans CJK SC",sans-serif}
+  #deck{background:var(--paper);box-shadow:0 30px 90px #1d302a26}
+  .slide{padding:78px 104px 98px;background:var(--paper)}
+  .slide:before{width:8px;background:#9eafa1}
+  .slide:nth-child(4n+1):before,.slide:nth-child(4n+2):before{background:var(--orange)}
+  .slide:after{border-color:#e2dfd5}
+  .kicker{color:var(--teal);font-size:19px;letter-spacing:1.5px}
+  .kicker:before{width:34px;height:2px;background:var(--orange)}
+  h1{font-size:78px;line-height:1.16;font-weight:750;letter-spacing:-1px}
+  h2{font-size:52px;line-height:1.2;font-weight:740;letter-spacing:-.5px}
+  h3{font-size:27px;line-height:1.3;font-weight:720}
+  .subtitle{font-size:28px;line-height:1.58;color:var(--muted)}
+  .slide-head{margin-bottom:40px}
+  .slide-head .subline{font-size:22px;line-height:1.5;color:var(--muted);margin-top:14px}
+  .foot{left:104px;right:104px;bottom:38px;color:#899188;font-size:16px}
+  .foot .brand{color:#68786f;letter-spacing:1px}
+  .cover{background:#263b34}
+  .cover:after{border-color:#465a50}
+  .cover-copy .kicker{color:#c6d2c9}
+  .cover h1{font-size:88px;line-height:1.2;letter-spacing:0;color:#fbfaf5}
+  .cover .subtitle{font-size:27px;color:#d3ddd5}
+  .cover-meta{font-size:19px;color:#c2cec5}
+  .cover-meta .pill{border-color:#70877b;background:#ffffff0d;color:#e8eee9}
+  .cover-art .ring{border-color:#5d7166}
+  .cover-art .ring.r2{border-color:#43584e}
+  .cover-art .block{background:#b87350}
+  .cover-art .block.b2{background:#89a194}
+  .cover-art .block.b3{background:#d2ad78}
+  .cover-art .orbit{border-color:#d8dfd6}
+  .agenda-item{gap:25px;padding:23px 0;font-size:29px;line-height:1.4}
+  .agenda-item b{font-size:18px;color:var(--orange)}
+  .thesis{gap:60px}
+  .thesis blockquote{font-size:44px;line-height:1.42;border-left-color:var(--orange)}
+  .thesis blockquote em{color:var(--teal)}
+  .thesis-row{background:#eeeee7;border-left-color:#9eafa1;padding:23px 26px;font-size:22px;line-height:1.52}
+  .thesis-row strong{font-size:17px;color:var(--teal)}
+  .compare{gap:30px}
+  .compare-panel{padding:29px 32px 22px;background:#efeee8;border-top:4px solid #9eafa1}
+  .compare-panel.s{background:#f3eee7;border-top-color:var(--orange)}
+  .compare-title h3{font-size:33px}
+  .compare-title span{font-size:17px;color:var(--muted)}
+  .qrow{padding:15px 0;border-color:#deddd4}
+  .qrow b{font-size:19px;color:var(--teal)}
+  .compare-panel.s .qrow b{color:#a96343}
+  .qrow strong{font-size:22px}
+  .qrow small{font-size:17px;line-height:1.4;color:var(--muted)}
+  .tag{font-size:15px;background:#e1e8df;color:#476656;padding:8px 10px}
+  .compare-panel.s .tag{background:#efe0d5;color:#985c3c}
+  .bottom-callout{padding:18px 20px;border-left-color:var(--orange);font-size:20px;line-height:1.5;color:#384b42}
+  .insight-grid{gap:18px}
+  .insight{padding:24px 22px 20px;background:#efeee8;border-top:3px solid #91a99a}
+  .insight:nth-child(2){border-color:var(--orange)}
+  .insight:nth-child(3){border-color:#78998a}
+  .insight:nth-child(4){border-color:#c3a775}
+  .insight .num{font-size:17px;color:var(--muted)}
+  .insight h3{margin:14px 0 10px}
+  .insight p{font-size:19px;line-height:1.55;color:#5b6b63}
+  .summary-band{margin-top:24px;padding:20px 25px;background:#e9ebe3;font-size:21px;line-height:1.5}
+  .summary-band b{color:var(--teal)}
+  .pathway:before{background:#c7d0c6}
+  .stage-mark{background:#e7ebe3;box-shadow:0 0 0 1px #aebbad;color:#4f7564}
+  .stage:nth-child(2) .stage-mark{background:#f2e7dd;box-shadow:0 0 0 1px #d8b39d;color:#a66343}
+  .stage:nth-child(3) .stage-mark{background:#e8ece5;box-shadow:0 0 0 1px #aabcae;color:#557b68}
+  .stage p{font-size:20px;line-height:1.58;color:#5b6c63}
+  .stage .goal{margin-top:17px;padding:14px 15px;background:#efeee8;font-size:17px;line-height:1.5;color:#3f6252}
+  .comms-label{background:#263b34}
+  .comms-label span{color:#bfd0c4}
+  .comms-step{padding:22px 0;border-color:var(--line)}
+  .comms-step b{background:#e6ebe4;color:var(--teal)}
+  .comms-step:nth-child(3) b{background:#f3e7de;color:#a96343}
+  .comms-step p{font-size:19px;line-height:1.55;color:var(--muted)}
+  .warning{background:#f2e8df;border-left-color:var(--orange)}
+  .warning .eyebrow{color:#9d5e40}
+  .warning p{font-size:20px;line-height:1.6;color:#64594f}
+  .method li{padding:14px 0;font-size:19px;line-height:1.55;color:#4e6258}
+  .method li:before{color:var(--teal)}
+  .quote{margin-top:21px;padding:16px 18px;background:#e9ebe4;font-size:19px;line-height:1.55;color:#3e584b}
+  .program-box{padding:32px 34px;background:#eeeee8;border-top:4px solid #91a99a}
+  .program-box h3{font-size:29px}
+  .program-box p{font-size:20px;line-height:1.62;color:#5b6b63}
+  .program-box ul{font-size:19px;line-height:1.8;color:#3f5349}
+  .program-box.custom{border-top-color:var(--orange);background:#f3ece4}
+  .program-arrow{color:#81968a}
+  .program-arrow span{font-size:16px;color:var(--muted)}
+  .stat-panel{background:#e9ebe4}
+  .stat-panel:nth-child(2){background:#f2e8df}
+  .stat-panel .label{font-size:20px;color:#596b60}
+  .stat-panel .value{font-size:124px;color:#4f7967}
+  .stat-panel:nth-child(2) .value{color:#ad6847}
+  .stat-panel .unit{font-size:27px;color:#69776e}
+  .stat-panel .bar{height:8px;background:#d7ded4}
+  .stat-panel .bar i{background:#658a76}
+  .stat-panel:nth-child(2) .bar i{background:#b87350}
+  .stat-panel small{font-size:16px;color:#78847c}
+  .priority{background:#263b34}
+  .priority span{color:#c0d0c4}
+  .priority strong{font-size:32px}
+  .priority p{font-size:19px;line-height:1.6;color:#d8e0d9}
+  .gesp-call{background:#e9ebe4;border-left-color:var(--teal)}
+  .gesp-call strong{font-size:39px}
+  .gesp-call p{font-size:21px;line-height:1.6;color:#5a6d62}
+  .gesp-point{padding:18px 0;border-color:var(--line)}
+  .gesp-point b{font-size:18px;color:var(--orange)}
+  .gesp-point p{font-size:21px;line-height:1.55;color:#4a6055}
+  .action{padding:21px 0;border-color:var(--line)}
+  .action .n{font-size:18px;color:var(--orange)}
+  .action h3{font-size:23px}
+  .action p{font-size:19px;line-height:1.55;color:var(--muted)}
+  .closing{background:#263b34}
+  .closing:before{background:var(--orange)}
+  .closing h2{font-size:74px;color:#faf9f4}
+  .closing p{font-size:29px;line-height:1.6;color:#d2ddd4}
+  .closing .closing-rule{background:#c08461}
+  .closing .closing-date{font-size:19px;color:#becdc2}
+  .closing .foot,.cover .foot{color:#aabbb0}
+  .closing .foot .brand,.cover .foot .brand{color:#c4d0c7}
+  #controls{background:linear-gradient(0deg,#1d332c1c,transparent)}
+  .control-btn{border-color:#d6d8cf;background:#fbfaf5;color:#34483d;box-shadow:0 3px 12px #263b3414}
+  .control-btn:hover{background:#e9ece5}
+  #counter{color:#3f584a}
+  #progress{background:var(--orange)}
+  #hint{color:#66776d}
+  #overview{background:#eeeee8f5}
+  .thumb{border-color:#d7d9cf;background:#faf9f4;color:var(--ink);box-shadow:0 6px 18px #263b340d}
+  .thumb:hover{border-color:var(--orange)}
+  .thumb b{color:var(--orange)}
+  @media print{.slide{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<main id="viewport" aria-label="月度教学同步会演示文稿">
+<div id="deck">
+  <section class="slide cover active" data-title="月度教学同步会">
+    <div class="cover-art" aria-hidden="true"><div class="ring"></div><div class="ring r2"></div><div class="orbit"></div><div class="block"></div><div class="block b2"></div><div class="block b3"></div></div>
+    <div class="cover-copy"><div class="kicker">教学管理 · 月度同步</div><h1>月度教学<br>同步会</h1><p class="subtitle">从竞赛变化到教学动作<br>把观察，转化成下一阶段的安排</p><div class="cover-meta"><span class="pill">2026 / 11</span><span>主管与教学团队内部汇报</span></div></div>
+  </section>
+  <section class="slide" data-title="本次会议的四项同步">
+    <header class="slide-head"><div class="kicker">MEETING MAP · 01</div><h2>本次会议的四项同步</h2><p class="subline">先对齐判断，再明确校区可执行的动作</p></header>
+    <div class="body agenda">
+      <div class="agenda-item"><b>01</b><span>CSP-J/S 题目变化与备赛建议</span></div>
+      <div class="agenda-item"><b>02</b><span>高潜学员题单与定制训练</span></div>
+      <div class="agenda-item"><b>03</b><span>月赛参与情况与 11 月动员</span></div>
+      <div class="agenda-item"><b>04</b><span>GESP 考级建议与知识点准备</span></div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>2026.11</span></footer>
+  </section>
+  <section class="slide" data-title="核心判断：分水岭正在前移">
+    <header class="slide-head"><div class="kicker">01 · CSP 变化</div><h2>核心判断：分水岭正在前移</h2></header>
+    <div class="body thesis">
+      <blockquote>今年不宜简单说“整体变难”或“整体变简单”。<br><em>变化在于：更早考察建模、规模意识与解题闭环。</em></blockquote>
+      <div class="thesis-list">
+        <div class="thesis-row"><strong>题型没有突变</strong>仍是四道传统程序设计题</div>
+        <div class="thesis-row"><strong>解题要求更完整</strong>读题抽象、证明性质、估算复杂度、可靠实现</div>
+        <div class="thesis-row"><strong>得分策略更重要</strong>识别特殊性质，规划可验证的部分分</div>
+      </div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>03 / 12</span></footer>
+  </section>
+  <section class="slide" data-title="J 与 S：门槛分布各有不同">
+    <header class="slide-head"><div class="kicker">01 · CSP 变化</div><h2>J 与 S：门槛分布各有不同</h2><p class="subline">比较重点不是代码行数，而是每题的思维入口与失分风险</p></header>
+    <div class="body compare">
+      <div class="compare-panel"><div class="compare-title"><h3>CSP-J</h3><span>基础中出现模型门槛</span></div>
+        <div class="qrow"><b>T1</b><div><strong>旅游</strong><small>规则判断与边界细节</small></div><span class="tag">基础稳定</span></div>
+        <div class="qrow"><b>T2</b><div><strong>回文串</strong><small>压缩表示、两端批量匹配</small></div><span class="tag">门槛前移</span></div>
+        <div class="qrow"><b>T3</b><div><strong>按位与</strong><small>高位贪心与整体可行性</small></div><span class="tag">策略判断</span></div>
+        <div class="qrow"><b>T4</b><div><strong>纸牌游戏</strong><small>从过程观察后缀递推</small></div><span class="tag">观察转化</span></div>
+        <div class="bottom-callout">J 组：别把“代码短”理解成“思路直接”，T2 是更早的分水岭。</div>
+      </div>
+      <div class="compare-panel s"><div class="compare-title"><h3>CSP-S</h3><span>前半打开，后半区分</span></div>
+        <div class="qrow"><b>T1</b><div><strong>能量水晶</strong><small>排序与双指针维护区间</small></div><span class="tag">入口清楚</span></div>
+        <div class="qrow"><b>T2</b><div><strong>地铁</strong><small>线路关系压缩为图与换乘代价</small></div><span class="tag">图建模</span></div>
+        <div class="qrow"><b>T3</b><div><strong>迁徙</strong><small>最短路计数与状态压缩</small></div><span class="tag">性质证明</span></div>
+        <div class="qrow"><b>T4</b><div><strong>研发基地</strong><small>树结构归约与大规模实现</small></div><span class="tag">主要区分</span></div>
+        <div class="bottom-callout">S 组：T1/T2 更易建立入口，不代表压轴结构题变轻。</div>
+      </div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>04 / 12</span></footer>
+  </section>
+  <section class="slide" data-title="备赛重点：按能力分层训练">
+    <header class="slide-head"><div class="kicker">01 · 教学应对</div><h2>备赛重点：按能力分层训练</h2><p class="subline">统一加题量，不如让每一层都知道下一步练什么</p></header>
+    <div class="body pathway">
+      <div class="stage"><div class="stage-mark">01</div><h3>基础巩固</h3><p>先减少本可避免的失分：读题、变量范围、边界、模拟与基础算法。</p><div class="goal"><b>阶段检查</b>　能解释变量、循环边界，并稳定完成基础题。</div></div>
+      <div class="stage"><div class="stage-mark">02</div><h3>稳定拿分</h3><p>从“认出题型”走向“说清为什么”：双指针、贪心、二分、图论与递推。</p><div class="goal"><b>阶段检查</b>　能抽象模型、估算复杂度，并规划部分分。</div></div>
+      <div class="stage"><div class="stage-mark">03</div><h3>冲高突破</h3><p>强化陌生题建模、性质证明、算法组合、大数据实现与限时整卷。</p><div class="goal"><b>阶段检查</b>　区分算法正确与实现达标，压轴题拿到有效分。</div></div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>05 / 12</span></footer>
+  </section>
+  <section class="slide" data-title="赛后与家校沟通：先接情绪，再谈计划">
+    <header class="slide-head"><div class="kicker">01 · 家校沟通</div><h2>赛后沟通：先接情绪，再谈计划</h2><p class="subline">用孩子真实表现替代标签，用下一步行动替代单一估分</p></header>
+    <div class="body comms">
+      <div class="comms-label"><span>统一沟通顺序</span><strong>情绪<br>→ 事实<br>→ 行动</strong></div>
+      <div class="comms-steps">
+        <div class="comms-step"><b>01</b><div><h3>先接住情绪</h3><p>考试刚结束，不急着用一道题或一次估分给孩子下结论。</p></div></div>
+        <div class="comms-step"><b>02</b><div><h3>讲清具体事实</h3><p>按组别与题目拆解门槛，避免笼统说“整卷简单”或“整体超纲”。</p></div></div>
+        <div class="comms-step"><b>03</b><div><h3>反馈下一步计划</h3><p>结合可核验代码与赛场记录，区分题意、思路、复杂度和实现问题。</p></div></div>
+        <div class="comms-step"><b>04</b><div><h3>对未知保持诚实</h3><p>明确数据来源和不确定性，不把网传估分包装成官方结果。</p></div></div>
+      </div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>06 / 12</span></footer>
+  </section>
+  <section class="slide" data-title="山东分数线：只给有依据的判断">
+    <header class="slide-head"><div class="kicker">01 · 分数线口径</div><h2>山东分数线：只给有依据的判断</h2><p class="subline">现阶段的正确做法不是报一个数字，而是说明边界、方法与更新时间</p></header>
+    <div class="body uncertainty">
+      <div class="warning"><span class="eyebrow">CURRENT LIMIT</span><strong>山东评分<br>暂不可复现</strong><p>相关代码包加密，暂时无法独立核验完整评分。未经核验的精确分数线会制造伪确定性。</p></div>
+      <div class="method"><h3>建立可更新的估算流程</h3><ol>
+        <li>先核对组别、年份、题目与计分规则是否一致</li>
+        <li>只纳入来源、日期、样本量可说明的数据</li>
+        <li>看分布、名额与省际差异，不用单一最低分代替</li>
+        <li>内部做低 / 中 / 高情景，对外说明区间与置信度</li>
+        <li>官方或可复现数据出现后，及时更新并保留口径</li>
+      </ol><div class="quote">建议统一表述：目前没有可靠的山东精确线；我们会参考已核验数据作审慎区间判断，正式结果以官方公布为准。</div></div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>07 / 12</span></footer>
+  </section>
+  <section class="slide" data-title="高潜学员：题单同步，训练可定制">
+    <header class="slide-head"><div class="kicker">02 · 高潜培养</div><h2>高潜学员：题单同步，训练可定制</h2><p class="subline">先让校区可用，再为拔尖学员建立匹配的进阶路径</p></header>
+    <div class="body program">
+      <div class="program-box"><h3>语法阶段 · 第一期题单</h3><p>题单已同步至 TMS，作为校区开展高潜学员额外训练的统一起点。</p><ul><li>周三前为主管开通管理权限</li><li>结合学员当前能力安排练习与反馈</li><li>记录训练表现，便于后续分层</li></ul></div>
+      <div class="program-arrow">→<span>发现拔尖<br>持续沟通</span></div>
+      <div class="program-box custom"><h3>不设阶段门槛 · 个别规划</h3><p>校区发现任何阶段的拔尖学员，都可以随时沟通，按学员特点定制后期规划。</p><ul><li>不只限于语法阶段</li><li>依据能力诊断调整目标</li><li>衔接长期训练与后续课程</li></ul></div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>08 / 12</span></footer>
+  </section>
+  <section class="slide" data-title="10 月月赛：参与规模已有基础">
+    <header class="slide-head"><div class="kicker">03 · 月赛参与</div><h2>10 月月赛：参与规模已有基础</h2><p class="subline">苗圃 261 人、望道 80 人；11 月继续扩大参与覆盖</p></header>
+    <div class="body stats">
+      <div class="stat-panel"><span class="label">苗圃 · 10 月参赛</span><strong class="value">261</strong><span class="unit">名学员</span><div class="bar"><i></i></div><small>本月参赛人数</small></div>
+      <div class="stat-panel"><span class="label">望道 · 10 月参赛</span><strong class="value">80</strong><span class="unit">名学员</span><div class="bar"><i></i></div><small>与苗圃同口径展示</small></div>
+      <div class="priority"><span>11 月重点</span><strong>从“已有规模”<br>走向“校区覆盖”</strong><p>仍有校区零人参加。请各校区主动推荐合适学员，避免参赛机会集中在少数校区。</p></div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>09 / 12</span></footer>
+  </section>
+  <section class="slide" data-title="GESP：先测试，再建议考级">
+    <header class="slide-head"><div class="kicker">04 · GESP 考级建议</div><h2>GESP：先测试，再建议考级</h2><p class="subline">减少主观推荐，让建议建立在学员知识点掌握情况上</p></header>
+    <div class="body gesp">
+      <div class="gesp-call"><strong>各等级知识点<br>相互独立</strong><p>不宜仅凭课程进度或印象推荐等级。先做测试，再结合结果与学员目标判断。</p></div>
+      <div class="gesp-points">
+        <div class="gesp-point"><b>01</b><p><strong>建议先测评</strong>，以实际掌握情况决定报考等级。</p></div>
+        <div class="gesp-point"><b>02</b><p><strong>区分补齐难度</strong>：集训阶段编程题较难临时补足，客观题知识点相对更适合系统补充。</p></div>
+        <div class="gesp-point"><b>03</b><p><strong>提前发放知识点手册</strong>，给学员留出理解、记忆和复习时间。</p></div>
+        <div class="gesp-point"><b>04</b><p><strong>避免临近考试突击</strong>，把知识点准备前置到日常教学安排。</p></div>
+      </div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>10 / 12</span></footer>
+  </section>
+  <section class="slide" data-title="会后行动：把同步转化为执行">
+    <header class="slide-head"><div class="kicker">NEXT STEPS</div><h2>会后行动：把同步转化为执行</h2><p class="subline">请各校区结合学员情况落到负责人和时间点</p></header>
+    <div class="body actions">
+      <div class="action"><span class="n">01</span><div><h3>主管权限开通</h3><p>周三前完成 TMS 第一期高潜题单管理权限配置。</p></div></div>
+      <div class="action"><span class="n">02</span><div><h3>排查高潜学员</h3><p>各阶段拔尖学员均可沟通，形成个别化后续规划。</p></div></div>
+      <div class="action"><span class="n">03</span><div><h3>推进 11 月月赛</h3><p>各校区主动推荐学员，重点改善零人参赛情况。</p></div></div>
+      <div class="action"><span class="n">04</span><div><h3>前置 GESP 准备</h3><p>用测试辅助考级建议，提前发放知识点手册。</p></div></div>
+      <div class="action"><span class="n">05</span><div><h3>统一 CSP 家长沟通</h3><p>说清题目变化与训练计划，不传播未经核验的分数线。</p></div></div>
+      <div class="action"><span class="n">06</span><div><h3>建立持续复盘</h3><p>基于可核验表现诊断问题，后续数据出现时更新判断。</p></div></div>
+    </div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>11 / 12</span></footer>
+  </section>
+  <section class="slide closing" data-title="让判断落到下一步">
+    <div class="body closing-copy"><div class="closing-rule"></div><h2>让判断落到<br>下一步</h2><p>把竞赛变化讲清楚，<br>把学员支持做具体，把校区行动推进到位。</p><div class="closing-date">月度教学同步会 · 2026 年 11 月</div></div>
+    <footer class="foot"><span class="brand">MONTHLY TEACHING SYNC</span><span>12 / 12</span></footer>
+  </section>
+  <div id="overview" aria-label="幻灯片总览"></div>
+</div>
+</main>
+<nav id="controls" aria-label="演示控制">
+  <span id="hint">← → 翻页　·　O 总览　·　F 全屏</span>
+  <button class="control-btn" id="prev" aria-label="上一页" title="上一页（←）">←</button>
+  <span id="counter" aria-live="polite">01 / 12</span>
+  <button class="control-btn" id="next" aria-label="下一页" title="下一页（→）">→</button>
+  <button class="control-btn" id="overviewBtn" aria-label="幻灯片总览" title="幻灯片总览（O）">▦</button>
+  <button class="control-btn" id="full" aria-label="全屏演示" title="全屏演示（F）">□</button>
+  <div id="progress"></div>
+</nav>
+<script>
+(() => {
+  const deck = document.querySelector('#deck');
+  const slides = [...document.querySelectorAll('.slide')];
+  const overview = document.querySelector('#overview');
+  const counter = document.querySelector('#counter');
+  const progress = document.querySelector('#progress');
+  let current = 0;
+  function fit(){
+    const scale = Math.min(innerWidth / 1600, innerHeight / 900);
+    deck.style.transform = `scale(${scale})`;
+  }
+  function show(index){
+    current = Math.max(0, Math.min(slides.length - 1, index));
+    slides.forEach((slide,i) => slide.classList.toggle('active', i === current));
+    counter.textContent = `${String(current + 1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
+    progress.style.width = `${((current + 1) / slides.length) * 100}%`;
+    document.title = `${slides[current].dataset.title} · 月度教学同步会`;
+    document.querySelector('#prev').disabled = current === 0;
+    document.querySelector('#next').disabled = current === slides.length - 1;
+  }
+  function toggleOverview(force){
+    const open = force ?? !overview.classList.contains('open');
+    overview.classList.toggle('open', open);
+    if(open) overview.querySelector('button')?.focus();
+  }
+  slides.forEach((slide,i) => {
+    const button = document.createElement('button');
+    button.className = 'thumb';
+    button.innerHTML = `<b>${String(i + 1).padStart(2,'0')}</b><span>${slide.dataset.title}</span>`;
+    button.addEventListener('click', () => { show(i); toggleOverview(false); });
+    overview.append(button);
+  });
+  document.querySelector('#prev').addEventListener('click', () => show(current - 1));
+  document.querySelector('#next').addEventListener('click', () => show(current + 1));
+  document.querySelector('#overviewBtn').addEventListener('click', () => toggleOverview());
+  document.querySelector('#full').addEventListener('click', async () => {
+    if(!document.fullscreenElement) await document.documentElement.requestFullscreen?.();
+    else await document.exitFullscreen?.();
+  });
+  document.addEventListener('keydown', e => {
+    if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault(); if(overview.classList.contains('open')) toggleOverview(false); else show(current + 1);}
+    if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault(); if(overview.classList.contains('open')) toggleOverview(false); else show(current - 1);}
+    if(e.key.toLowerCase() === 'o') toggleOverview();
+    if(e.key.toLowerCase() === 'f') document.querySelector('#full').click();
+    if(e.key === 'Escape' && overview.classList.contains('open')) toggleOverview(false);
+  });
+  let touchX = null;
+  deck.addEventListener('touchstart', e => touchX = e.changedTouches[0].screenX, {passive:true});
+  deck.addEventListener('touchend', e => {if(touchX === null)return; const dx=e.changedTouches[0].screenX-touchX; if(Math.abs(dx)>60)show(current+(dx<0?1:-1)); touchX=null;}, {passive:true});
+  addEventListener('resize', fit);
+  fit(); show(0);
+})();
+</script>
+</body>
+</html>
